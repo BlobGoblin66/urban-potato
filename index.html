@@ -104,10 +104,10 @@
     }
 
     function pickItems() {
-      const result1 = pickRandomMultiple(BigMeals, 1);
-      const result2 = pickRandomMultiple(SoloMains, 3);
-      const result3 = pickRandomMultiple(Sides, 3);
-      const result4 = pickRandomMultiple(Snacks, 2);
+      const result1 = pickRandomUnique(BigMeals, 1);
+      const result2 = pickRandomUnique(SoloMains, 3);
+      const result3 = pickRandomUnique(Sides, 3);
+      const result4 = pickRandomUnique(Snacks, 2);
 
       document.getElementById("results").innerHTML = `
         <div class="card"><h3>Meal with leftovers:</h3><ul>${result1.map(item => `<li>${item}</li>`).join("")}</ul></div>
