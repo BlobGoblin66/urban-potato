@@ -74,6 +74,19 @@
     li {
       margin: 5px 0;
     }
+
+
+  .columns {
+  display: flex;
+  justify-content: space-between; /* spread columns evenly */
+  gap: 20px;                      /* space between columns */
+}
+
+.column {
+  flex: 1;                        /* each column takes equal width */
+  min-width: 250px;               /* optional: prevents columns from getting too narrow */
+}
+    
   </style>
 </head>
 
@@ -143,4 +156,5 @@
 
 </body>
 </html>
+
 
