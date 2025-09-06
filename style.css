@@ -1,0 +1,63 @@
+/* --- PAGE STYLES --- */
+
+/* Background color and font for the whole page */
+body {
+  background-color: #38182F;
+  font-family: 'Bricolage Grotesque', 'Arial', sans-serif;
+  color: #EEE1B3;
+  margin: 0;
+  padding: 30px;
+  text-align: center;
+}
+
+/* Main heading */
+h1 {
+  color: #EEE1B3;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+/* Subheadings for sections */
+h3 {
+  color: #38182F;
+  font-size: 22px;
+  margin-top: 0;
+}
+
+/* Buttons */
+button {
+  background-color: #EEE1B3;
+  color: #38182F;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: #56666B;
+}
+
+/* Cards for list sections */
+.card {
+  background-color: #EEE1B3;
+  color: #38182F;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin: 15px auto;
+  max-width: 500px;
+  text-align: left;
+}
+
+/* Lists inside cards */
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin: 5px 0;
+}
