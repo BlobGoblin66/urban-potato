@@ -1,22 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="UTF-8">
+<title>Magic 8-Ball Meal Generator</title>
 
+<!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200&display=swap" rel="stylesheet">
+
+<!-- Shared CSS -->
 <link rel="stylesheet" href="css/style.css">
-  
-<meta charset="UTF-8">
-<title>Magic 8-Ball Meal Generator</title>
+
 <style>
+  /* Additional CSS for Magic 8-Ball */
+  .ball-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+  }
 
-
-  /* Ball container */
   .ball {
     position: relative;
-    width: 400px;
-    height: 400px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     background: radial-gradient(circle at 30% 30%, #000 0%, #111 80%);
     display: flex;
@@ -27,12 +35,19 @@
     transition: transform 0.2s;
   }
 
-  /* Text inside the ball */
-  .ball-text {
-    color: #00ffff;
-    font-weight: bold;
+  /* Inner window for text */
+  .ball-window {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #1E90FF; /* classic 8-ball blue */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    width: 140px;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px;
   }
 
   /* Shake animation */
@@ -46,49 +61,34 @@
   }
 
   .shake {
-    animation: shake 0.8s;
+    animation: shake 0.6s;
   }
+
 </style>
 </head>
+
 <body>
+  <h1>Magic 8-Ball Meal Generator</h1>
 
-<h1>Magic 8-Ball Meal Generator</h1>
+  <div class="ball-container">
+    <div class="ball" id="magicBall">
+      <div class="ball-window" id="mealText">Click to Shake!</div>
+    </div>
+  </div>
 
-<div class="ball" id="magicBall">
-  <div class="ball-text" id="mealText">Shake for food</div>
-</div>
+  <script>
+    // Example meal options (replace with your arrays if desired)
+    const meals = [
+      "Spaghetti Bolognese",
+      "Chicken Stir Fry",
+      "Beef Tacos",
+      "Vegetable Curry",
+      "Salmon & Veggies",
+      "Pasta Carbonara",
+      "Quiche",
+      "BBQ Pork Ribs",
+      "Gnocchi with Pesto",
+      "Chicken Caesar Salad"
+    ];
 
-<script>
-const meals = [
-  "Spaghetti Bolognese",
-  "Chicken Stir Fry",
-  "Beef Tacos",
-  "Vegetable Curry",
-  "Salmon & Veggies",
-  "Pasta Carbonara",
-  "Quiche",
-  "BBQ Pork Ribs",
-  "Gnocchi with Pesto",
-  "Chicken Caesar Salad"
-];
-
-const ball = document.getElementById('magicBall');
-const text = document.getElementById('mealText');
-
-ball.addEventListener('click', () => {
-  // Add shake animation
-  ball.classList.add('shake');
-
-  // Remove shake after animation ends
-  setTimeout(() => {
-    ball.classList.remove('shake');
-    
-    // Pick random meal
-    const randomMeal = meals[Math.floor(Math.random() * meals.length)];
-    text.textContent = randomMeal;
-  }, 600); // matches shake duration
-});
-</script>
-
-</body>
-</html>
+    const ball = document.g
