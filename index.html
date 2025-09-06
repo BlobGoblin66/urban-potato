@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Random Item Picker</title>
+  <title>Shopping and meal tool</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -25,8 +25,8 @@
   </style>
 </head>
 <body>
-  <h1>Random Item Selector</h1>
-  <button onclick="pickItems()">Pick Items</button>
+  <h1>Shopping and meal tool</h1>
+  <button onclick="pickItems()">Click me baby one more time</button>
 
   <div id="results"></div>
 
@@ -48,13 +48,12 @@
       const result4 = pickRandom(Snacks);
 
       document.getElementById("results").innerHTML = `
-        <div class="item"><strong>List 1:</strong> ${result1}</div>
-        <div class="item"><strong>List 2:</strong> ${result2}</div>
-        <div class="item"><strong>List 3:</strong> ${result3}</div>
-        <div class="item"><strong>List 4:</strong> ${result4}</div>
+        <div class="item"><strong>BigMeals:</strong> ${result1}</div>
+        <div class="item"><strong>SoloMains:</strong> ${result2}</div>
+        <div class="item"><strong>Sides:</strong> ${result3}</div>
+        <div class="item"><strong>Snacks:</strong> ${result4}</div>
       `;
     }
   </script>
 </body>
 </html>
-
