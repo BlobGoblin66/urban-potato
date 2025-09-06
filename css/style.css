@@ -41,6 +41,26 @@ button:hover {
   background-color: #56666B;
 }
 
+/* --- Tool buttons on index page --- */
+.tool-link {
+  display: inline-block;
+  background-color: #EEE1B3;
+  color: #38182F;
+  text-decoration: none;
+  padding: 15px 30px;
+  margin: 15px;
+  border-radius: 12px;
+  font-size: 22px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.tool-link:hover {
+  background-color: #56666B;
+  color: #EEE1B3;
+}
+
+
 /* Cards for list sections */
 .card {
   background-color: #EEE1B3;
