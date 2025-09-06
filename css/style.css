@@ -2,9 +2,9 @@
 
 /* Background color and font for the whole page */
 body {
-  background-color: #38182F;
+  background-color: #323031;
   font-family: 'Bricolage Grotesque', 'Arial', sans-serif;
-  color: #EEE1B3;
+  color: #BEB7A4;
   margin: 0;
   padding: 30px;
   text-align: center;
@@ -12,22 +12,22 @@ body {
 
 /* Main heading */
 h1 {
-  color: #EEE1B3;
+  color: #BEB7A4;
   font-size: 36px;
   margin-bottom: 20px;
 }
 
 /* Subheadings for sections */
 h3 {
-  color: #38182F;
+  color: #BEB7A4;
   font-size: 22px;
   margin-top: 0;
 }
 
 /* Buttons */
 button {
-  background-color: #EEE1B3;
-  color: #38182F;
+  background-color: #BEB7A4;
+  color: #323031;
   border: none;
   border-radius: 12px;
   padding: 12px 25px;
@@ -38,14 +38,14 @@ button {
 }
 
 button:hover {
-  background-color: #56666B;
+  background-color: #FF6978;
 }
 
 /* --- Tool buttons on index page --- */
 .tool-link {
   display: inline-block;
-  background-color: #EEE1B3;
-  color: #38182F;
+  background-color: #BEB7A4;
+  color: #323031;
   text-decoration: none;
   padding: 15px 30px;
   margin: 15px;
@@ -56,15 +56,15 @@ button:hover {
 }
 
 .tool-link:hover {
-  background-color: #56666B;
-  color: #EEE1B3;
+  background-color: #FF6978;
+  color: #BEB7A4;
 }
 
 
 /* Cards for list sections */
 .card {
-  background-color: #EEE1B3;
-  color: #38182F;
+  background-color: #BEB7A4;
+  color: #323031;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   padding: 20px;
