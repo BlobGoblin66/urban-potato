@@ -3,27 +3,79 @@
 <head>
   <meta charset="UTF-8">
   <title>Shopping and meal tool</title>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200&display=swap" rel="stylesheet">
+
+
   <style>
+    /* --- PAGE STYLES --- */
+    
+    /* Background color and font for the whole page */
     body {
-      font-family: Arial, sans-serif;
+      background-color: #38182F;       /* page background */
+      font-family: 'Bricolage Grotesque', 'Arial', sans-serif; /* main font */
+      color: #EEE1B3;                  /* default text color */
+      margin: 0;
+      padding: 30px;
       text-align: center;
-      margin: 50px;
     }
+
+    /* Main heading */
+    h1 {
+      color: #EEE1B3;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    /* Subheadings for sections */
+    h3 {
+      color: #EEE1B3;
+      font-size: 22px;
+      margin-top: 0;
+    }
+
+    /* Buttons */
     button {
-      padding: 10px 20px;
+      background-color: #EEE1B3;
+      color: #38182F;
+      border: none;
+      border-radius: 12px;
+      padding: 12px 25px;
       font-size: 16px;
-      margin: 20px;
       cursor: pointer;
+      margin-bottom: 20px;
+      transition: 0.2s;
     }
-    #results {
-      font-size: 18px;
-      margin-top: 20px;
+
+    button:hover {
+      background-color: #56666B;
     }
-    .item {
+
+    /* Cards for list sections */
+    .card {
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin: 15px auto;
+      max-width: 500px;
+      text-align: left;
+    }
+
+    /* Lists inside cards */
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
       margin: 5px 0;
     }
   </style>
 </head>
+
 <body>
   <h1>Shopping and meal tool</h1>
   <button onclick="pickItems()">Click me baby one more time</button>
@@ -37,21 +89,31 @@
     const Sides = ["Baby spinach", "Jalapenos", "Broccolini", "Red potatoes", "Chimichurri", "Coriander", "Parsley", "Vietnamese mint", "Vermicelli noodles", "Sweet potato", "Radishes", "Granny smith apple", "Shallot", "Shredded coleslaw", "Shredded carrot", "Corn cobs", "Pita bread", "Cos lettuce", "Goat cheese", "Chinese broccoli", "Green beans", "Greek yoghurt"];
     const Snacks = ["Strawberries", "Salt and vinegar delites", "Chocolate chip cookies", "Chocolate teddy bears", "Crumpets", "Bananas", "Ham and cheese sandwiches", "Corn chips", "Chocolate", "Rice crackers","Mini dips", "Grapes", "Olives/antipasto"];
 
-    function pickRandom(arr) {
-      return arr[Math.floor(Math.random() * arr.length)];
+    // Pick 'num' unique random items from an array
+    function pickRandomUnique(arr, num) {
+      let arrayCopy = [...arr]; // copy so we don't modify the original
+      let results = [];
+
+      for (let i = 0; i < num && arrayCopy.length > 0; i++) {
+        let index = Math.floor(Math.random() * arrayCopy.length);
+        results.push(arrayCopy[index]);
+        arrayCopy.splice(index, 1); // remove the selected item
+      }
+
+      return results;
     }
 
     function pickItems() {
-      const result1 = pickRandom(BigMeals);
-      const result2 = pickRandom(SoloMains);
-      const result3 = pickRandom(Sides);
-      const result4 = pickRandom(Snacks);
+      const result1 = pickRandomMultiple(BigMeals, 1);
+      const result2 = pickRandomMultiple(SoloMains, 3);
+      const result3 = pickRandomMultiple(Sides, 3);
+      const result4 = pickRandomMultiple(Snacks, 2);
 
       document.getElementById("results").innerHTML = `
-        <div class="item"><strong>BigMeals:</strong> ${result1}</div>
-        <div class="item"><strong>SoloMains:</strong> ${result2}</div>
-        <div class="item"><strong>Sides:</strong> ${result3}</div>
-        <div class="item"><strong>Snacks:</strong> ${result4}</div>
+        <div class="card"><h3>Meal with leftovers:</h3><ul>${result1.map(item => `<li>${item}</li>`).join("")}</ul></div>
+        <div class="card"><h3>Mains:</h3><ul>${result2.map(item => `<li>${item}</li>`).join("")}</ul></div>
+        <div class="card"><h3>Sides:</h3><ul>${result3.map(item => `<li>${item}</li>`).join("")}</ul></div>
+        <div class="card"><h3>Snacks:</h3><ul>${result4.map(item => `<li>${item}</li>`).join("")}</ul></div>
       `;
     }
   </script>
