@@ -91,4 +91,23 @@
       "Chicken Caesar Salad"
     ];
 
-    const ball = document.g
+    const ball = document.getElementById('magicBall');
+    const text = document.getElementById('mealText');
+
+    ball.addEventListener('click', () => {
+      // Add shake animation
+      ball.classList.add('shake');
+
+      // Remove shake after animation ends
+      setTimeout(() => {
+        ball.classList.remove('shake');
+        
+        // Pick random meal
+        const randomMeal = meals[Math.floor(Math.random() * meals.length)];
+        text.textContent = randomMeal;
+      }, 600); // matches shake duration
+    });
+  </script>
+
+</body>
+</html>
