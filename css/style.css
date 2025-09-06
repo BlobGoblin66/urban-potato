@@ -1,8 +1,18 @@
+https://BlobGoblin66.github.io/urban-potato/
+
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+
+-------------------------
+
+
+
 /* --- PAGE STYLES --- */
 
 /* Background color and font for the whole page */
 body {
-  background-color: #323031;
+  background-color: #141414;
   font-family: 'Bricolage Grotesque', 'Arial', sans-serif;
   color: #BEB7A4;
   margin: 0;
@@ -12,9 +22,16 @@ body {
 
 /* Main heading */
 h1 {
-  color: #BEB7A4;
+  color: #B8FF1F;
   font-size: 36px;
   margin-bottom: 20px;
+}
+
+/* 2 heading */
+h2 {
+  color: #7D82B8;
+  font-size: 30px;
+  margin-bottom: 10px;
 }
 
 /* Subheadings for sections */
@@ -26,8 +43,8 @@ h3 {
 
 /* Buttons */
 button {
-  background-color: #BEB7A4;
-  color: #323031;
+  background-color: #B8FF1F;
+  color: #141414;
   border: none;
   border-radius: 12px;
   padding: 12px 25px;
@@ -38,14 +55,14 @@ button {
 }
 
 button:hover {
-  background-color: #FF6978;
+  background-color: #7D82B8;
 }
 
 /* --- Tool buttons on index page --- */
 .tool-link {
   display: inline-block;
-  background-color: #BEB7A4;
-  color: #323031;
+  background-color: #B8FF1F;
+  color: #141414;
   text-decoration: none;
   padding: 15px 30px;
   margin: 15px;
@@ -56,15 +73,15 @@ button:hover {
 }
 
 .tool-link:hover {
-  background-color: #FF6978;
-  color: #BEB7A4;
+  background-color: #7D82B8;
+  color: #141414;
 }
 
 
 /* Cards for list sections */
 .card {
-  background-color: #BEB7A4;
-  color: #323031;
+  background-color: #7D82B8;
+  color: #141414;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   padding: 20px;
